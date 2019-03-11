@@ -4,7 +4,7 @@ import Actors from "./Actors";
 class ActorList extends Component {
   render() {
     return (
-      <div>
+      <div className="actor-container">
         {this.props.actors.map((actor, i) => {
           return (
             <Actors
@@ -14,6 +14,7 @@ class ActorList extends Component {
               mass={actor.mass}
               height={actor.height}
               gender={actor.gender}
+              films={actor.films.length}
             />
           );
         })}

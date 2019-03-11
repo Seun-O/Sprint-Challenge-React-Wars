@@ -1,10 +1,9 @@
 import React from "react";
 import ActorImages from "./ActorImages";
 
-export default function Actors({ name, birth, gender, height, mass }) {
-  console.log(name);
+export default function Actors({ name, birth, gender, height, mass, films }) {
   return (
-    <div style={{ width: "500px" }} className="ui card">
+    <div style={{ width: "800px" }} className="ui centered card">
       <div className="image">
         <ActorImages src={name} />
       </div>
@@ -13,14 +12,21 @@ export default function Actors({ name, birth, gender, height, mass }) {
         <div className="meta">
           <span className="date">Born in: {birth}</span>
         </div>
-        <p>Gender: {gender}</p>
-        <p>Height: {height}</p>
-        <p>Mass: {mass}</p>
+        <div className="description">
+          <p>
+            <span className="prop">Gender</span>: {gender}
+          </p>
+          <p>
+            <span className="prop">Height:</span> {height}
+          </p>
+          <p>
+            <span className="prop">Mass:</span> {mass}
+          </p>
+        </div>
+      </div>
+      <div className="extra content">
+        <i className="film icon" /> {films} films
       </div>
     </div>
   );
-}
-
-{
-  /* <i class="film icon" />; */
 }
