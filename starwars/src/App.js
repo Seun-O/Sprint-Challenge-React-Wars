@@ -37,19 +37,40 @@ class App extends Component {
   };
 
   nextPage = () => {
-    this.getCharacters(this.state.next);
-    // this.state.next === null ? null : ;
+    if (this.state.next === null) {
+      return;
+    } else {
+      this.getCharacters(this.state.next);
+    }
   };
   prevPage = () => {
-    this.getCharacters(this.state.prev);
+    if (this.state.prev === null) {
+      return;
+    } else {
+      this.getCharacters(this.state.prev);
+    }
   };
 
   render() {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
-        <button onClick={this.prevPage}>Prev</button>
-        <button onClick={this.nextPage}>Next</button>
+        <div className="ui buttons">
+          <button
+            className="ui left labeled icon button"
+            onClick={this.prevPage}
+          >
+            <i className="left chevron icon" />
+            Prev
+          </button>
+          <button
+            className="ui right labeled icon button"
+            onClick={this.nextPage}
+          >
+            <i className="right chevron icon" />
+            Next
+          </button>
+        </div>
         <ActorList actors={this.state.starwarsChars} />
       </div>
     );
