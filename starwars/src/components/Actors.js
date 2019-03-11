@@ -1,10 +1,12 @@
 import React from "react";
+import ActorImages from "./ActorImages";
 
 export default function Actors({ name, birth, gender, height, mass }) {
+  console.log(name);
   return (
-    <div className="ui centered card">
+    <div style={{ width: "500px" }} className="ui card">
       <div className="image">
-        <img src="../pics/LukeSkywalker.jpg" alt={name} />
+        <ActorImages src={name} />
       </div>
       <div className="content">
         <h1 className="Header">{name}</h1>
@@ -17,4 +19,8 @@ export default function Actors({ name, birth, gender, height, mass }) {
       </div>
     </div>
   );
+}
+
+{
+  /* <i class="film icon" />; */
 }
