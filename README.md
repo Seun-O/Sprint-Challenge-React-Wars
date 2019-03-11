@@ -26,11 +26,19 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+      React is a library that is used to build single page web applications. It is primarily used to build User Interfaces components are the building blocks of most react applications.
+
 - [ ] What does it mean to _think_ in react?
+
+      Thinking in react means to break down the different aspects of a website to see what can be broken up into reusable components
 
 - [ ] Describe state.
 
+      State is an object that determines how a component in react will render and behave. It is initiated with this.state ={ name: ''} it is also muted by calling the this.setState() method
+
 - [ ] Describe props.
+
+      Props are how react passes information to the different components you can pass props through the HTML tag of the component <Component prop1={this.state.name}>
 
 ## Project Set Up
 
@@ -98,7 +106,7 @@ In your solution, it is essential that you follow best practices and produce cle
 
 ## Stretch Problems
 
-- [ ] Build a pagination system that will allow you to load the next page of data
+- [x] Build a pagination system that will allow you to load the next page of data
 
 - Take note on the data that's coming back from the server call in our `getCharacters`
 - console.log() the data coming back from the server.
